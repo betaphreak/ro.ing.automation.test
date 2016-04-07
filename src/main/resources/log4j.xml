@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="true" xmlns:log4j='http://jakarta.apache.org/log4j/'>
+    <appender name="Console" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss:SSS} %-5p %c{1}\t- %m%n" />
+        </layout>
+    </appender>
+
+    <appender name="Syslog4J" class="org.productivity.java.syslog4j.impl.log4j.Syslog4jAppender">
+        <param name="Protocol" value="tcp"/>
+        <param name="Facility" value="LOCAL7"/>
+        <param name="Port" value="514" />
+        <param name="SyslogHost" value="10.98.20.154"/>
+
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{HH:mm:ss} %-5p [%c{1}] %m"/> <!-- value="%d{yyyy-MM-dd HH:mm:ss:SSS} %-5p %c{1}\t- %m%n"/> -->
+        </layout>
+    </appender>
+
+    <logger name="org.springframework">
+        <level value="info" />
+    </logger>
+
+    <logger name="com.sun">
+        <level value="info" />
+    </logger>
+
+    <logger name="org.apache">
+        <level value="info" />
+    </logger>
+
+    <root>
+        <level value="info" />
+        <appender-ref ref="Console" />
+        <!--<appender-ref ref="Syslog4J" />-->
+    </root>
+</log4j:configuration>
