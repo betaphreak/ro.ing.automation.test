@@ -8,7 +8,7 @@
     <artifactId>test</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <description>ING Automation Test Project</description>
     <name>ING Automation</name>
 
@@ -18,7 +18,7 @@
         <selenium.version>2.52.0</selenium.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <spring.version>4.2.2.RELEASE</spring.version>
+        <spring.version>4.1.5.RELEASE</spring.version>
     </properties>
 
     <repositories>
