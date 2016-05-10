@@ -15,7 +15,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 /**
  * Created by Alexandru Giurovici on 15.06.2015.
  */
-class MultiThreadRunner extends SpringJUnit4ClassRunner
+public class MultiThreadRunner extends SpringJUnit4ClassRunner
 {
 
     private AtomicInteger numThreads;
@@ -25,7 +25,7 @@ class MultiThreadRunner extends SpringJUnit4ClassRunner
     private static final Log logger = LogFactory.getLog(MultiThreadRunner.class);
     private final TestContextManager testContextManager;
 
-    private MultiThreadRunner(Class<?> c) throws InitializationError
+    public MultiThreadRunner(Class<?> c) throws InitializationError
     {
         super(c);
         numThreads = new AtomicInteger(0);
