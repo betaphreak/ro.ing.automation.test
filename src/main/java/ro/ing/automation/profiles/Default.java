@@ -25,11 +25,11 @@ public class Default extends SpringBeanAutowiringSupport
 
     static void init()
     {
-        try {
-            props.load(Default.class.getResourceAsStream("/config.properties"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
+//        try {
+//            props.load(Default.class.getResourceAsStream("/config.properties"));
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
     }
 
     public static Properties getProps()

@@ -19,7 +19,7 @@
     </appender>
 
     <logger name="org.springframework">
-        <level value="info" />
+        <level value="debug" />
     </logger>
 
     <logger name="com.sun">
@@ -31,7 +31,7 @@
     </logger>
 
     <root>
-        <level value="info" />
+        <level value="debug" />
         <appender-ref ref="Console" />
         <!--<appender-ref ref="Syslog4J" />-->
     </root>
